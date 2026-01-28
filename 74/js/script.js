@@ -54,8 +54,13 @@ function insertList(){
         contentSpan.textContent = text;
         let time = new Date();
         let timeP = document.createElement("p");
-        let timeText = time.getFullYear() + "/" + (time.getMonth() + 1) + "/" + time.getDate() +
-                              "  " + time.getHours() + ":" + time.getMinutes() + ":" + time.getSeconds();
+        const year = String(time.getFullYear()).padStart(2,"0");
+        const month = String((time.getMonth() + 1)).padStart(2,"0");
+        const date = String(time.getDate()).padStart(2,"0");
+        const hours = String(time.getHours()).padStart(2,"0");
+        const minutes = String(time.getMinutes()).padStart(2,"0");
+        const seconds = String(time.getSeconds()).padStart(2,"0");
+        const timeText = year + "/" + month + "/" + date + "  " + hours  + ":" + minutes + ":" + seconds;
         timeP.textContent = timeText;
         timeP.style.fontSize = "0.8em";
         timeP.style.margin = 0;
