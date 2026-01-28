@@ -1,5 +1,6 @@
 body{
     background-color:lightgreen;
+    margin:0;
 }
 #container{
     margin:20px auto auto;
@@ -52,4 +53,13 @@ li button{
 
 #count{
     text-align:right;
+}
+#footer{
+    width:100%;
+    position:fixed;
+    bottom:0;
+    background-color:white;
+    text-align:center;
+}
+
 }
