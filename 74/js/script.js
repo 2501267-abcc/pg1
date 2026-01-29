@@ -43,7 +43,7 @@ function insertList(){
     let titleVal = title.value;
     let timeBox = document.getElementById("time");
     let timeVal = timeBox.value;
-    if(titleVal != false && timeVal != false){
+    if(titleVal != false && timeVal != "00:00"){
         let ul = document.getElementById("playList");
         let li = document.createElement("li");
         li.id = id;
@@ -84,14 +84,14 @@ function insertList(){
         gameList.push(gameData);
         localStorage.setItem("list",JSON.stringify(gameList));
         title.value = "";
-        timeBox.value = "";
+        timeBox.value = "00:00";
         let countPtag = document.getElementById("count");
         countPtag.textContent = count + "件";
     }
     else if(titleVal == false){
         alert("タイトルが未入力です");
     }
-    else if(timeVal == false){
+    else if(timeVal == "00:00"){
         alert("プレイ時間が未入力です");
     }
 }
